@@ -8,5 +8,5 @@ import Database.Esqueleto.Internal.Sql (unsafeSqlFunction)
 class Esqueleto query expr backend => EsqueletoUnaccent query expr backend where
     unaccent :: SqlString a => expr (Value a) -> expr (Value a)
 
-instance EsqueletoPgtrgm SqlQuery SqlExpr SqlBackend where
+instance EsqueletoUnaccent SqlQuery SqlExpr SqlBackend where
     unaccent a = unsafeSqlFunction "unaccent" a
