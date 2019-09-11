@@ -7,7 +7,7 @@ library
   hs-source-dirs:      src
   ghc-options:         -O2 -Wall
   default-language:    Haskell2010
-  build-depends:       base >=4.12 && <4.13
+  build-depends:       base >=4.12.0 && <4.13
                      , esqueleto >=2.5.3 && <2.7
   exposed-modules:     Database.Esqueleto.Unaccent
 
